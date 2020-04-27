@@ -1,0 +1,68 @@
+.app {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    border: green 1px solid;
+}
+
+.header {
+    color: white;
+}
+
+.main-list-container {
+    border: grey 1px solid;
+    width: 100%;
+    
+    padding: 20px;
+    height: 500px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.list-container {
+
+}
+
+.new-todo-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.input-text {
+    padding: 0px 10px 0 10px;
+}
+
+input {
+    height: 28px;
+}
+
+.add-todo-button {
+    height: 28px;
+}
+
+.todo-row {
+    display: flex;
+    align-items: center;
+    border: lightgrey 1px solid;
+    height: 30px;
+}
+
+.task {
+    padding: 0 10px 0 10px;
+}
