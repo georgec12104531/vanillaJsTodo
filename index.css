@@ -10,6 +10,8 @@
     padding: 20px;
     width: 100%;
     border: green 1px solid;
+    height: 70px; 
+    background-color: green;
 }
 
 .header {
