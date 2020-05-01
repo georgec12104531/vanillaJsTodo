@@ -89,4 +89,21 @@ const handleRemoveTodo = (e) => {
     } 
 }
 
-document.querySelector('.list-container').addEventListener('click', handleRemoveTodo)
+document.querySelector('.list-container').addEventListener('click', handleRemoveTodo);
+
+
+
+const handleSearchInput = (e) => {
+    const todoArr = document.querySelectorAll('.todo-row');
+    
+    todoArr.forEach((todo) => {
+        let todoText = todo.firstChild.childNodes[1].innerText;
+        if (!todoText.toLowerCase().includes(e.target.value.toLowerCase())) {
+            todo.style.display = 'none';
+        } else {
+            todo.style.display = 'flex';
+        }
+    })
+}
+
+const searchInput = document.getElementById('search').onkeyup  = handleSearchInput;
