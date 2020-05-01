@@ -19,8 +19,10 @@ const generateTodos = () => {
     listHTML = ''
     todos.forEach(({id, task}, index) => {
         listHTML += "<div class='todo-row'>"; 
+        listHTML += "<div class='task-sub-container'>";
         listHTML += "<div>" + JSON.stringify(index + 1) + '</div>'
         listHTML += "<div class='task'>" + task + '</div>'
+        listHTML += '</div>';
         listHTML += "<button class='remove-todo'>x</button>"
         listHTML += '</div>';
     })
@@ -52,7 +54,7 @@ const handleInputChange = (event) => {
 }
 
 const addNewTodo = ({id, task}) => {
-    const todoRow = document.createElement('div')
+    let todoRow = document.createElement('div')
     todoRow.className = 'todo-row';
 
     idElement = document.createElement('div');
@@ -65,10 +67,14 @@ const addNewTodo = ({id, task}) => {
 
     buttonElement = document.createElement('button')
     buttonElement.appendChild(document.createTextNode('x'));
-    "<button class='remove-todo'>x</button>"
+    // "<button class='remove-todo'>x</button>"
+
+    subContainer = document.createElement('div')
+    subContainer.className = 'task-sub-container'
+    subContainer.appendChild(idElement);
+    subContainer.appendChild(taskElement);
     
-    todoRow.appendChild(idElement);
-    todoRow.appendChild(taskElement);
+    todoRow.appendChild(subContainer);
     todoRow.appendChild(buttonElement);
 
     document.querySelector('.list-container').appendChild(todoRow);

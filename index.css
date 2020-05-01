@@ -7,11 +7,12 @@
 .header-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 20px;
     width: 100%;
-    border: green 1px solid;
+    border: #2B4A6F 1px solid;
     height: 70px; 
-    background-color: green;
+    background-color: #2B4A6F;
 }
 
 .header {
@@ -21,21 +22,32 @@
 .main-list-container {
     border: grey 1px solid;
     width: 100%;
-    
     padding: 20px;
     height: 500px;
-    
     display: flex;
     flex-direction: column;
 }
 
-.list-container {
-
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
 }
 
+.search-container input {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.task-sub-container {
+    display: flex;
+}
+ 
 .new-todo-container {
     display: flex;
     align-items: center;
+    margin-top: auto;
 }
 
 .input-container {
@@ -61,10 +73,15 @@ input {
 .todo-row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border: lightgrey 1px solid;
     height: 30px;
 }
 
 .task {
     padding: 0 10px 0 10px;
+}
+
+.remove-todo {
+    background-color;
 }
